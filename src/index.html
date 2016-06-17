@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Justin Jung">
+        <title>Google Sheet Display</title>
+        <script src="sheet-api.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+    </head>
+    <body>
+        <div id="authorize-div" style="display: none">
+            <span>Authorize access to Google Sheets API</span>
+            <button id="authorize-button" onclick="handleAuthClick(event)">Authorize</button>
+        </div>
+        <pre id="output"></pre>
+    </body>
+</html>
