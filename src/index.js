@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Treeful from 'treeful';
 import Sheet from './sheet';
+import Card from './components/card';
 
 class App extends Component {
 	constructor () {
@@ -9,7 +10,7 @@ class App extends Component {
 		this.state = {
 			projects: []
 		};
-		let sheet = new Sheet();
+		const sheet = new Sheet();
 		sheet.loadScript('https://apis.google.com/js/client.js');
 	}
 
@@ -27,8 +28,8 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className='projects'>
-				{this.state.projects.map((project, index) => <p key={index}>{project.join(', ')}</p>)}
+			<div className='app'>
+				{this.state.projects.map((project, index) => <Card key={index} project={project} />)}
 			</div>
 		);
 	}

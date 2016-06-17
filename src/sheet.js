@@ -59,7 +59,15 @@ export default class Sheet {
                 spreadsheetId: SHEET_ID,
                 range: RANGE,
             }).then((response) => {
-                Treeful.setData('projects', response.result.values);
+                const projects = [];
+                response.result.values.forEach((value) => {
+                    projects.push({
+                        title: value[0],
+                        due: value[1],
+                        devs: value[2],
+                    });
+                });
+                Treeful.setData('projects', projects);
             }, (response) => {
                 console.error(new Error('Error: ' + response.result.error.message));
             });

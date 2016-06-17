@@ -1,5 +1,6 @@
 {
     "ecmaFeatures": {
+        "jsx": true,
         "modules": true
     },
     "env": {
@@ -9,17 +10,22 @@
     "parser": "babel-eslint",
     "rules": {
         "quotes": [2, "single"],
+        "curly": [2, "all"],
         "strict": [2, "never"],
         "semi": [2, "always"],
-        "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
-        "no-redeclare": [2, {"builtinGlobals": true}],
-        "no-console": [2, { "allow": ["warn", "error"] }],
-        "babel/generator-star-spacing": 1,
-        "babel/new-cap": 1,
-        "babel/object-shorthand": 1,
-        "babel/no-await-in-loop": 1
+        "no-unused-vars": [2, { "vars": "all", "args": "after-used" }],
+        "no-redeclare": [2, { "builtinGlobals": true }],
+        "brace-style": [2, "1tbs"],
+        "no-alert": 2,
+        "babel/object-shorthand": 2,
+        "babel/arrow-parens": 2,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/jsx-no-duplicate-props": 2,
+        "react/react-in-jsx-scope": 2
     },
     "plugins": [
-        "babel"
+        "babel",
+        "react"
     ]
 }
