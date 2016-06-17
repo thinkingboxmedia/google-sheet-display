@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Treeful from 'treeful';
+
+import './index.scss';
 import Sheet from './sheet';
 import Card from './components/card';
 
